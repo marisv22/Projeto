@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - Profissões</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(102, 8, 102, 0.8);
+            color: rgb(255, 255, 255);
+            background-image: url('../img/img9.png');
+            background-size: 130px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 124%;
+            height: 90%;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: rgba(102, 8, 102, 0.8);
+        }
+
+        header img {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+            margin: 10px;
+        }
+
+        header h1 {
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .left,
+        .right {
+            width: 160%;
+            text-align: left;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: rgb(255, 255, 255);
+        }
+
+
+        .left h2,
+        .right h2 {
+            background-color: rgba(102, 8, 102, 0.8);
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fdfdfd;
+        }
+
+        .left p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .left p span {
+            color: #79106b;
+           
+            font-weight: bold;
+        }
+
+        .salary {
+            background-color: rgba(102, 8, 102, 0.8);
+            /* icone do balao */
+            width: 20%;
+            padding: 30px;
+            border-radius: 67px;
+            margin-top: 30px;
+        }
+
+        .salary ul {
+            list-style-type: none;
+            padding: 10;
+        }
+
+        .salary li {
+            margin: 12px;
+        }
+
+        .right ul {
+            width: 20%;
+            padding: 30px;
+            margin-top: 30px;
+            background-color: rgba(102, 8, 102, 0.8);
+            padding: 50px;
+            border-radius: 67px;
+            height: 50%;
+        }
+
+        .right ul li {
+            margin: 9%;
+            margin: 12px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: rgba(102, 8, 102, 0.8);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: rgba(102, 8, 102, 0.8);
+            margin: 0;
+            padding: 0;
+            padding: 190px;
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../img/logo.png" alt="Logo Jogos Digitais">
+        <h1><a href="../index.html">Jogos Digitais</a></h1>
+    </header>
+    <div class="menu-container">
+        <button class="menu-icon" id="menuToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <div class="menu-items">
+            <a href="../html/jogos.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span class="tooltip">JOGOS</span>
+            </a>
+            
+            <a href="../html/Profissoes.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 7h-9"></path>
+                    <path d="M14 17H5"></path>
+                    <circle cx="17" cy="17" r="3"></circle>
+                    <circle cx="7" cy="7" r="3"></circle>
+                </svg>
+                <span class="tooltip">PROFISSÕES</span>
+            </a>
+            <a href="../html/cursos.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span class="tooltip">CURSOS</span>
+            </a>
+            <a href="../html/entrevista.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="tooltip">ENTREVISTAS</span>
+            </a>
+            <a href="../html/curiosidades.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span class="tooltip">CURIOSIDADES</span>
+            </a>
+        </div>
+    </div>
+    <button id="botao-audio">
+        <img id="icone" src="../img/audio.png" alt="audio">
+        <audio id="meu-audio" src="caminho/para/seu/audio.mp3"></audio>
+    </button>
+    <div class="content">
+        <div class="left">
+
+            <h2>Profissões</h2>
+            <p><span>&#9650;Game designer:</span> Esse profissional está envolvido com o planejamento e a criação do
+                jogo, pensando em todo seu conteúdo, sua dinâmica, suas regras e interações.</p>
+            <p><span>&#9651; Programador:</span> Trabalha com jogos para computador, dispositivos móveis ou consoles,
+                desenvolvendo as instruções lógicas do jogo digital.</p>
+            <p><span>&#9671; Designer de personagens:</span> É o processo de criar, visualizar e desenvolver um
+                personagem do zero.</p>
+            <p><span>&#9673; Testador de games:</span> É o nome dado ao profissional que trabalha testando diferentes
+                tipos de jogos, ele verifica a qualidade do produto.</p>
+            <p><span>&#9632; Produtor/Gerente de projetos de jogos:</span> Responsável por liderar o desenvolvimento e
+                lançamento de jogos. Ele desempenha um papel crucial na indústria de jogos, garantindo que os jogos
+                sejam desenvolvidos com sucesso e atendam às necessidades do mercado e dos jogadores.</p>
+
+            <div class="salary">
+                <h3>Salários</h3>
+                <ul>
+                    <li>Game designer: R$ 4.967</li>
+                    <li>Programador: R$ 9.215</li>
+                    <li>Designer de personagens: R$ 9.225</li>
+                    <li>Testador de games: R$ 1.900</li>
+                    <li>Produtor/Gerente de projetos de jogos: R$ 2.600 a 16.000</li>
+                </ul>
+            </div>
+
+            <a href="../html/entrevista.html" class="button">Veja as Entrevistas</a>
+        </div>
+
+        <div class="right">
+            <h2>Algumas Profissões</h2>
+            <ul>
+                <li>Game designer</li>
+                <li>Programador</li>
+                <li>Designer de personagens</li>
+                <li>Testador de games</li>
+                <li>Produtor/Gerente de projetos de jogos</li>
+            </ul>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

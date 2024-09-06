@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - Cursos</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: rgba(102, 8, 102, 0.8);
+            color: white;
+            line-height: 1.6;
+            background-size: 1900px;
+            background-image: url('../img/cursosimg.png')
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: rgba(102, 8, 102, 0.8);
+        }
+
+        header img {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+            margin: 10px;
+        }
+
+        header h1 {
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo h1 {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cursos {
+            padding: 40px 20px;
+            text-align: center;
+
+        }
+
+        .cursos h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .conteudo {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .descricao-cursos {
+            flex: 2;
+        }
+
+        .curso-item {
+            background-color: rgba(102, 8, 102, 0.8);
+            
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .curso-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .curso-item p {
+            color: #CCC;
+        }
+
+        .icone {
+            font-size: 2em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .lista-cursos {
+            flex: 1;
+            background-color: rgba(102, 8, 102, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            height: 700px;
+
+        }
+
+        .lista-cursos h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .lista-cursos ul {
+            list-style: none;
+        }
+
+        .lista-cursos ul li {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .button {
+            display: inline-block;
+            background-color: rgba(163, 35, 135, 0.829);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../img/logo.png" alt="Logo Jogos Digitais">
+        <h1><a href="../index.html">Jogos Digitais</a></h1>
+    </header>
+    <div class="menu-container">
+        <button class="menu-icon" id="menuToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <div class="menu-items">
+            <a href="../html/jogos.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span class="tooltip">JOGOS</span>
+            </a>
+            <a href="../html/Profissoes.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 7h-9"></path>
+                    <path d="M14 17H5"></path>
+                    <circle cx="17" cy="17" r="3"></circle>
+                    <circle cx="7" cy="7" r="3"></circle>
+                </svg>
+                <span class="tooltip">PROFISSÕES</span>
+            </a>
+            <a href="../html/cursos.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span class="tooltip">CURSOS</span>
+            </a>
+            <a href="../html/entrevista.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="tooltip">ENTREVISTAS</span>
+            </a>
+            <a href="../html/curiosidades.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span class="tooltip">CURIOSIDADES</span>
+            </a>
+        </div>
+    </div>
+    <button id="botao-audio">
+        <img id="icone" src="../img/audio.png" alt="audio">
+        <audio id="meu-audio" src="caminho/para/seu/audio.mp3"></audio>
+    </button>
+    <section class="cursos">
+        <div class="header">
+            <h2>Cursos</h2>
+        </div><br>
+        <div class="conteudo">
+            <div class="descricao-cursos">
+                <div class="curso-item">
+                    <span class="icone">✖</span>
+                    <h3>Design de jogos digitais :</h3>
+                    <p>Este curso abrange a criação e o desenvolvimento de jogos digitais, incluindo aspectos de
+                        narrativa, mecânicas de jogo, design de níveis, dentre outros.</p>
+                </div>
+                <div class="curso-item">
+                    <span class="icone">▲</span>
+                    <h3>Programação de jogos :</h3>
+                    <p>Focado em linguagens de programação utilizadas no desenvolvimento de jogos, como C++, C#, Unity,
+                        Unreal, Engine, entre outras.</p>
+                </div>
+                <div class="curso-item">
+                    <span class="icone">■</span>
+                    <h3>Arte e animação para jogos digitais :</h3>
+                    <p>Este curso aborda a criação de elementos visuais para jogos, incluindo modelagem 3D, animação,
+                        texturização e design de personagens.</p>
+                </div>
+                <div class="curso-item">
+                    <span class="icone">◉</span>
+                    <h3>Áudio para jogos digitais :</h3>
+                    <p>Explora a criação e implementação de trilhas sonoras, efeitos sonoros e design de áudio para
+                        jogos.</p>
+                </div>
+            </div>
+            <div class="lista-cursos">
+                <h3>Alguns Cursos</h3>
+                <p>O curso de Jogos Digitais é uma graduação de nível superior com titulação tecnológica e duração média
+                    de dois anos para a formação. A graduação é para aquelas pessoas que têm o interesse de
+                    criar jogos de forma profissional a partir de um curso, e que consiga ingressar no
+                    mercado de trabalho. São alguns exemplos de cursos :</p>
+                <ul>
+                    <li>Design de Jogos Digitais;</li>
+                    <li>Programação de Jogos;</li>
+                    <li>Arte e animação para jogos digitais;</li>
+                    <li>Áudio para jogos digitais.</li>
+                </ul>
+                <p>Se você quiser saber mais sobre as faculdades, clique aqui:</p><a href="../html/faculdades.html" class="button">Faculdades</a>
+                <p>Se você quiser saber mais sobre as vagas, clique aqui:</p><a href="../html/vagas.html" class="button">Vagas</a>
+            </div>
+        </div>
+    </section>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

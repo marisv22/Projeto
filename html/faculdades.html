@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - Faculdades</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(../img/fotofacul.png);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+
+        .content {
+            width: 30%;
+            padding: 100px;
+        }
+
+
+        .content {
+            color: #eeebf3;
+            font-family: "Open Snans";
+            font-size: 18px;
+        }
+
+        .imagem {
+
+
+            margin-right: 0cm;
+            padding-top: 0px;
+            background-position: left top;
+
+
+
+        }
+
+        p.paragrafo {
+            margin-bottom: 13px;
+
+
+
+        }
+
+
+
+
+
+        .instituicoes h2 {
+            text-align: center;
+            width: 300px;
+            height: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: rgba(102, 8, 102, 0.8);
+            color: #d8c4ff;
+            border: 5px solid rgba(102, 8, 102, 0.8);
+        }
+
+        .instituicoes ul {
+            list-style: none;
+            padding-top: 20px;
+        }
+
+
+        .caixa li {
+            margin: 8px;
+        }
+
+        .titulo {
+            margin: 40px;
+            text-align: center;
+
+            height: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: rgba(102, 8, 102, 0.8);
+            color: #d8c4ff;
+            border: 5px solid rgba(102, 8, 102, 0.8);
+        }
+
+        .caixa {
+            list-style: none;
+
+            padding-top: 20px;
+            margin: 40px;
+            height: 170px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(102, 8, 102, 0.8);
+            color: #d8c4ff;
+            border: 5px solid rgba(102, 8, 102, 0.8);
+
+        }
+
+
+        footer {
+            background-color: rgba(102, 8, 102, 0.8);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+
+
+        }
+
+
+
+
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: rgba(102, 8, 102, 0.8);
+        }
+
+        header img {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+            margin: 10px;
+        }
+
+        header h1 {
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <header>
+        <img src="../img/logo.png" alt="Logo Jogos Digitais">
+        <h1><a href="../index.html">Jogos Digitais</a></h1>
+    </header>
+    <div class="menu-container">
+        <button class="menu-icon" id="menuToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <div class="menu-items">
+            <a href="../html/jogos.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span class="tooltip">JOGOS</span>
+            </a>
+            <a href="../html/Profissoes.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 7h-9"></path>
+                    <path d="M14 17H5"></path>
+                    <circle cx="17" cy="17" r="3"></circle>
+                    <circle cx="7" cy="7" r="3"></circle>
+                </svg>
+                <span class="tooltip">PROFISSÕES</span>
+            </a>
+            <a href="../html/cursos.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span class="tooltip">CURSOS</span>
+            </a>
+            <a href="../html/entrevista.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="tooltip">ENTREVISTAS</span>
+            </a>
+            <a href="../html/curiosidades.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span class="tooltip">CURIOSIDADES</span>
+            </a>
+        </div>
+    </div>
+    <button id="botao-audio">
+        <img id="icone" src="../img/audio.png" alt="audio">
+        <audio id="meu-audio" src="caminho/para/seu/audio.mp3"></audio>
+    </button>
+    <h1>Faculdades</h1>
+
+
+
+
+
+
+
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img class="imagem" src="../img/3.png">
+            <p class="paragrafo"> A faculdade perfeita para quem busca uma carreira em jogos é a faculdade de Jogos
+                Digitais.</p>
+            <p>O currículo do curso abrange uma ampla gama de disciplinas relevantes para a criação de jogos,
+                ensinando conceitos de design de jogos, programação, arte e animação, narrativa, áudio,
+                inteligência artificial e muito mais. Essa abordagem multidisciplinar permite que os graduados
+                tenham uma compreensão completa do processo de desenvolvimento de jogos e estejam preparados
+                para enfrentar os desafios que surgem ao longo do caminho.</p>
+        </div>
+
+
+        <ul>
+            <h2 class="titulo">Instituição </h2>
+
+            <div class="caixa">
+
+
+                <li>Faculdades Anhanguera</li>
+                <li>Unopar - Universidade Norte do Paraná</li>
+                <li>Universidade Anhembi Morumbi</li>
+                <li>Estácio - Universidade Estácio de Sá</li>
+                <li>USJT - Universidade São Judas Tadeu</li>
+                <li>Centro Universitário IBMR</li>
+                <li>FMU - Centro Universitário</li>
+            </div>
+        </ul>
+
+    </div>
+
+
+
+
+
+
+    <script src="../js/script.js"></script>
+
+
+</body>
+
+
+</html>

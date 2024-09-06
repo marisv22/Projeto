@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="../css/jogos.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body>
+
+    <div class="menulogo">
+        <div class="left-content">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo">
+            </div>
+            <div class="title">
+                <a href="../index.html" target="_blank">Jogos Digitais</a>
+            </div>
+        </div>
+        <nav>
+            <div class="menu-container">
+                <button class="menu-icon" id="menuToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="menu-items">
+                    <a href="../html/jogos.html" class="menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        <span class="tooltip">JOGOS</span>
+                    </a>
+                    <a href="../html/profissoes.html" class="menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 7h-9"></path>
+                            <path d="M14 17H5"></path>
+                            <circle cx="17" cy="17" r="3"></circle>
+                            <circle cx="7" cy="7" r="3"></circle>
+                        </svg>
+                        <span class="tooltip">PROFISSÕES</span>
+                    </a>
+                    <a href="../html/cursos.html" class="menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span class="tooltip">CURSOS</span>
+                    </a>
+                    <a href="../html/entrevista.html" class="menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <span class="tooltip">ENTREVISTAS</span>
+                    </a>
+                    <a href="../html/curiosidades.html" class="menu-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        <span class="tooltip">CURIOSIDADES</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br><br><br>
+    <button id="botao-audio">
+        <img id="icone" src="../img/audio.png" alt="audio">
+        <audio id="meu-audio" src="caminho/para/seu/audio.mp3"></audio>
+    </button>
+    <h1>Jogo</h1>
+    <div class="content">
+
+    <main>
+        
+        <header id="header">
+            <div class="player player-active" id="xPlayerDisplay" onclick="choosePlayer('X')">
+                X
+            </div>
+            <h3 id="titleHeader">Escolha</h3>
+            <div class="player" id="oPlayerDisplay" onclick="choosePlayer('O')">
+                O
+            </div>
+        </header>
+
+        <div id="board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+
+        <button id="restartBtn">
+            Reiniciar
+        </button>
+        <p>Essa é a demonstração de um jogo que pode ser criado nessa área.</p>
+    
+    </main>
+
+    <script>
+        const cells = document.querySelectorAll('.cell')
+        const titleHeader = document.querySelector('#titleHeader')
+        const xPlayerDisplay = document.querySelector('#xPlayerDisplay')
+        const oPlayerDisplay = document.querySelector('#oPlayerDisplay')
+        const restartBtn = document.querySelector('#restartBtn')
+
+
+        let player = 'X'
+        let isPauseGame = false
+        let isGameStart = false
+
+
+        const inputCells = ['', '', '',
+            '', '', '',
+            '', '', '']
+
+
+        const winConditions = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],
+            [0, 4, 8], [2, 4, 6]
+        ]
+
+
+        cells.forEach((cell, index) => {
+            cell.addEventListener('click', () => tapCell(cell, index))
+        })
+
+        function tapCell(cell, index) {
+
+            if (cell.textContent == '' &&
+                !isPauseGame
+            ) {
+                isGameStart = true
+                updateCell(cell, index)
+
+
+                if (!checkWinner()) {
+                    changePlayer()
+                    randomPick()
+                }
+            }
+        }
+
+        function updateCell(cell, index) {
+            cell.textContent = player
+            inputCells[index] = player
+            cell.style.color = (player == 'X') ? '#1892EA' : '#A737FF'
+        }
+
+        function changePlayer() {
+            player = (player == 'X') ? 'O' : 'X'
+        }
+
+        function randomPick() {
+
+            isPauseGame = true
+
+            setTimeout(() => {
+                let randomIndex
+                do {
+
+                    randomIndex = Math.floor(Math.random() * inputCells.length)
+                } while (
+
+                    inputCells[randomIndex] != ''
+                )
+
+
+                updateCell(cells[randomIndex], randomIndex, player)
+
+                if (!checkWinner()) {
+                    changePlayer()
+
+                    isPauseGame = false
+                    return
+                }
+                player = (player == 'X') ? 'O' : 'X'
+            }, 500)
+        }
+
+        function checkWinner() {
+            for (const [a, b, c] of winConditions) {
+
+                if (inputCells[a] == player &&
+                    inputCells[b] == player &&
+                    inputCells[c] == player
+                ) {
+                    declareWinner([a, b, c])
+                    return true
+                }
+            }
+
+
+            if (inputCells.every(cell => cell != '')) {
+                declareDraw()
+                return true
+            }
+        }
+
+        function declareWinner(winningIndices) {
+            titleHeader.textContent = `${player} Venceu!`
+            isPauseGame = true
+
+
+            winningIndices.forEach((index) =>
+                cells[index].style.background = '#2A2343'
+            )
+
+            restartBtn.style.visibility = 'visible'
+        }
+
+        function declareDraw() {
+            titleHeader.textContent = 'Empate!'
+            isPauseGame = true
+            restartBtn.style.visibility = 'visible'
+        }
+
+        function choosePlayer(selectedPlayer) {
+
+            if (!isGameStart) {
+
+                player = selectedPlayer
+                if (player == 'X') {
+
+                    xPlayerDisplay.classList.add('player-active')
+                    oPlayerDisplay.classList.remove('player-active')
+                } else {
+
+                    xPlayerDisplay.classList.remove('player-active')
+                    oPlayerDisplay.classList.add('player-active')
+                }
+            }
+        }
+
+        restartBtn.addEventListener('click', () => {
+            restartBtn.style.visibility = 'hidden'
+            inputCells.fill('')
+            cells.forEach(cell => {
+                cell.textContent = ''
+                cell.style.background = ''
+            })
+            isPauseGame = false
+            isGameStart = false
+            titleHeader.textContent = 'Escolha'
+        })
+
+
+
+    </script>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

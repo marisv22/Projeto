@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais - Curiosidades</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(102, 8, 102, 0.8);
+            background-size: 1900px;
+            color: #FFFFFF;
+            background-image: url('../img/jogosimg.png');
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: rgba(102, 8, 102, 0.8);
+        }
+
+        header img {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+            margin: 10px;
+        }
+
+        header h1 {
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header .audio-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .curiosidades h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        .curiosidade-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .curiosidade-item .icon {
+            margin-right: 15px;
+        }
+
+        .curiosidade-item p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../img/logo.png" alt="Logo Jogos Digitais">
+        <h1><a href="../index.html">Jogos Digitais</a></h1>
+    </header>
+    <div class="menu-container">
+        <button class="menu-icon" id="menuToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <div class="menu-items">
+            <a href="../html/jogos.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span class="tooltip">JOGOS</span>
+            </a>
+            <a href="../html/Profissoes.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 7h-9"></path>
+                    <path d="M14 17H5"></path>
+                    <circle cx="17" cy="17" r="3"></circle>
+                    <circle cx="7" cy="7" r="3"></circle>
+                </svg>
+                <span class="tooltip">PROFISSÕES</span>
+            </a>
+            <a href="../html/cursos.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span class="tooltip">CURSOS</span>
+            </a>
+            <a href="../html/entrevista.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="tooltip">ENTREVISTAS</span>
+            </a>
+            <a href="../html/curiosidades.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span class="tooltip">CURIOSIDADES</span>
+            </a>
+        </div>
+    </div>
+    <button id="botao-audio">
+        <img id="icone" src="../img/audio.png" alt="audio">
+        <audio id="meu-audio" src="caminho/para/seu/audio.mp3"></audio>
+    </button>
+    <main>
+        <section class="curiosidades">
+            <div class="header">
+                <h2>
+                    <center>Curiosidades</center>
+                </h2>
+            </div>
+            <div class="curiosidade-item">
+                <div class="icon"><img src="../img/playicon.png" alt="Ícone de Play"></div>
+                <p>Uma curiosidade sobre os cursos que compõem os jogos digitais, é que,quem cursou não precisa
+                    trabalhar necessariamente nessa área. Por ter uma formação muito forte na parte de modelagem e
+                    animação, é possível abrir muitas oportunidades de emprego, como por exemplo na área de cinema,
+                    propaganda, Marketing, efeitos especiais.</p>
+            </div>
+            <div class="curiosidade-item">
+                <div class="icon"><img src="../img/playicon.png" alt="Ícone de Play"></div>
+                <p>Há diversas áreas para seguir. Ao longo dos semestres o aluno experimenta todas as áreas de Jogos
+                    Digitais. Game designer, level designer, modelador, engenheiro de áudio, engenheiro de redes, entre
+                    outras funções que pode se seguir na área. O curso dá a oportunidade de experimentar cada um desses
+                    e, assim, será possível descobrir qual caminho seguir futuramente. Pode se inclinar mais para o lado
+                    artístico ou da programação.</p>
+            </div>
+            <div class="curiosidade-item">
+                <div class="icon"><img src="../img/playicon.png" alt="Ícone de Play"></div>
+                <p>Não precisa saber desenhar. Não se preocupe, não é necessário ter talento pro desenho. No início do
+                    curso a disciplina chamada Game Art ensina o aluno a fazer arte conceitual para jogo. Assim, quando
+                    tiver disciplinas como Modelagem Digital, o aluno terá noções básicas de desenho, como forma, luz,
+                    textura, perspectiva.</p>
+            </div>
+            <div class="curiosidade-item">
+                <div class="icon"><img src="../img/playicon.png" alt="Ícone de Play"></div>
+                <p>Pra quem estiver cursando e nao tiver talento para desenhar. No início do curso a disciplina chamada
+                    Game Art ensina o aluno a fazer arte conceitual para jogo. Assim, quando tiver disciplinas como
+                    Modelagem Digital, o aluno terá noções básicas de desenho, como forma, luz, textura.</p>
+            </div>
+            <div class="curiosidade-item">
+                <div class="icon"><img src="../img/playicon.png" alt="Ícone de Play"></div>
+                <p>Ao longo do semestre o aluno experimenta todas as áreas de Jogos Digitais. Como por exemplo, game
+                    designer, level designer, engenheiro de áudio, entre algumas outras funções que pode seguir nessa
+                    área. Quem cursa nessa área poderá se inclinar mais para o lado artístico ou da programação.</p>
+            </div>
+        </section>
+    </main>
+    <script src="../js/script.js"></script>
+    <div class="mascote">
+        <img src="..//videos/mascote.gif" alt="Mascote" style="width: 150px; height: auto;">
+    </div>
+</body>
+
+</html>

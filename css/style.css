@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #3c1044;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+    margin: 10px;
+}
+
+header h1 {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 50px 0;
+    position: relative;
+}
+
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+    align-items: center;
+}
+
+.section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.section img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 130vh;
+}
+
+#parallax1 {
+    background-image: url('../img/image.png');
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+p {
+    text-align: justify;
+    
+}
+
+#parallax2 {
+    background-image: url('../img/1.png');
+    padding: 20px;
+    box-sizing: border-box;
+  
+}
+
+#parallax3 {
+    background-image: url('../img/img11.png');
+    padding: 20px;       
+    box-sizing: border-box;
+
+}
+
+
+.menu-container {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    width: 250px;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    color: #ffffff;
+    background-color: #581864;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+.menu-items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.menu-item {
+    position: absolute;
+    background-color: #581864;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.menu-open .menu-items {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-open .menu-item {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+}
+
+
+.menu-open .menu-item:nth-child(1) {
+    transition-delay: 0.1s;
+    transform: translate(0, 80px);
+
+}
+
+.menu-open .menu-item:nth-child(2) {
+    transition-delay: 0.2s;
+    transform: translate(-80px, -40px);
+
+}
+
+.menu-open .menu-item:nth-child(3) {
+    transition-delay: 0.3s;
+    transform: translate(80px, -40px);
+
+}
+
+.menu-open .menu-item:nth-child(4) {
+    transition-delay: 0.4s;
+    transform: translate(-80px, 40px);
+
+}
+
+.menu-open .menu-item:nth-child(5) {
+    transition-delay: 0.5s;
+    transform: translate(80px, 40px);
+
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #ffffff;
+    color: #581864;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.menu-item:hover .tooltip {
+    opacity: 1;
+}
+
+.menu-item:nth-child(1) .tooltip {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-item:nth-child(2) .tooltip {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-item:nth-child(3) .tooltip {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-item:nth-child(4) .tooltip {
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-item:nth-child(5) .tooltip {
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}

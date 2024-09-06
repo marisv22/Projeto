@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Digitais</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <script>
+        function fucao1() {
+            alert("Jogos Digitais Anhanguera em EAD. A partir de : R$ 148,99 ");
+        }
+        function fucao2() {
+            alert("Jogos Digitais UNOPAR em EAD. A partir de : R$ 148,99 ");
+        }
+        function fucao3() {
+            alert("Jogos Digitais Anhembi Morumbi em EAD. A partir de : R$ 99,00");
+        }
+        function fucao4() {
+            alert("Não tem vaga nessa intituição");
+        }
+        function fucao5() {
+            alert("Jogos Digitais USJT em EAD. A partir de R$ 99,00");
+        }
+        function fucao6() {
+            alert("Não possui vaga na intituição IBMR em EAD e Presencial.");
+        }
+        function fucao7() {
+            alert("Jogos Digitais FMU em EAD. A partir de R$ 146,83");
+        }
+        function fucao8() {
+            alert("Jogos Digitais Uninter em Presencial. A partir de R$ 396,06. E em EAD é a partir de R$ 179,02");
+        }
+        function fucao9() {
+            alert("Jogos Digitais Uniasselvi em EAD. A partir de R$ 169,00");
+        }
+        function fucao10() {
+            alert("Não possui vaga na intituição Unip em EAD e Presencial.");
+        }
+        function fucao11() {
+            alert("Jogos Digitais PUCPR em Presencial. Acesse o site oficial da faculdade e saiba mais sobre opções de bolsas.");
+        }
+        function fucao12() {
+            alert("Jogos Digitais Unifacisa em Presencial. Acesse o site oficial da faculdade e saiba mais sobre opções de bolsas.");
+        }
+        function fucao13() {
+            alert("Jogos Digitas PUC Campinas em Presencial. Acesse o site oficial da faculdade e saiba mais sobre opções de bolsas.");
+        }
+        function fucao14() {
+            alert("Jogos Digitais Senac SP em Presencial. Acesse o site oficial da faculdade e saiba mais sobre opções de bolsas");
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(102, 8, 102, 0.8);
+            background-size: 1900px;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background-image: url('../img/vagas.png')
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: rgba(102, 8, 102, 0.8);
+        }
+        header a{
+            text-decoration: none;
+            color: white;
+        }
+
+        header img {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+            margin: 10px;
+        }
+
+        header h1 {
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        footer {
+            background-color: rgba(102, 8, 102, 0.8);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .logo,
+        footer .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img,
+        footer .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        nav,
+        footer nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a,
+        footer nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #f3ecf0;
+        }
+
+        .vagas-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .instituicao,
+        .instituição1 {
+            background-color: rgba(102, 8, 102, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 25%;
+        }
+
+        .instituicao h3,
+        .instituição1 h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .instituicao ul,
+        .instituição1 ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .instituicao li,
+        .instituição1 li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .instituicao input,
+        .instituição1 input {
+            margin-right: 10px;
+        }
+
+        .detalhes-vaga {
+            background-color: rgba(102, 8, 102, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .etiqueta {
+            background-color: rgba(102, 8, 102, 0.8);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .title {
+
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .title a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .left-content {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+<body>
+
+    <header>
+        <img src="../img/logo.png" alt="Logo Jogos Digitais">
+        <h1><a href="../index.html">Jogos Digitais</a></h1>
+    </header>
+
+    <div class="menu-container">
+        <button class="menu-icon" id="menuToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <div class="menu-items">
+            <a href="../html/jogos.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span class="tooltip">JOGOS</span>
+            </a>
+            <a href="../html/Profissoes.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 7h-9"></path>
+                    <path d="M14 17H5"></path>
+                    <circle cx="17" cy="17" r="3"></circle>
+                    <circle cx="7" cy="7" r="3"></circle>
+                </svg>
+                <span class="tooltip">PROFISSÕES</span>
+            </a>
+            <a href="../html/cursos.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span class="tooltip">CURSOS</span>
+            </a>
+            <a href="../html/entrevista.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="tooltip">ENTREVISTAS</span>
+            </a>
+            <a href="../html/curiosidades.html" class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span class="tooltip">CURIOSIDADES</span>
+            </a>
+        </div>
+    </div>
+    <br><br><br>
+    <button id="botao-audio">
+        <img id="icone" src="../img/audio.png" alt="audio">
+        <audio id="meu-audio" src="caminho/para/seu/audio.mp3"></audio>
+    </button>
+    <div class="header">
+        <h2>Vagas</h2>
+    </div>
+    <div class="vagas-container">
+        <div class="instituicao">
+            <h3>Instituição</h3>
+
+            <ul>
+                <li> Faculdades Anhanguera</li>
+                <input type="button" onclick="fucao1()" value="Ver se possui vaga" />
+                <li> Unopar - Universidade Norte do Paraná</li>
+                <input type="button" onclick="fucao2()" value="Ver se possui vaga" />
+                <li> Universidade Anhembi Morumbi</li>
+                <input type="button" onclick="fucao3()" value="Ver se possui vaga" />
+                <li> Estácio - Universidade Estácio de Sá</li>
+                <input type="button" onclick="fucao4()" value="Ver se possui vaga" />
+                <li> USJT - Universidade São Judas Tadeu</li>
+                <input type="button" onclick="fucao5()" value="Ver se possui vaga" />
+                <li> Centro Universitário IBMR</li>
+                <input type="button" onclick="fucao6()" value="Ver se possui vaga" />
+                <li> FMU - Centro Universitário</li>
+                <input type="button" onclick="fucao7()" value="Ver se possui vaga" />
+                </submit>
+
+        </div>
+        <div class="detalhes-vaga">
+
+            <div class="vaga-presencial">
+                <div class="etiqueta">Presencial</div>
+                <h4>Jogos Digitais<br>Tecnólogo</h4>
+                <p>Na modalidade PRESENCIAL, pelo menos 60% da carga horária das aulas é realizada presencialmente no
+                    campus, o que permite maior convivência entre alunos e professores.</p>
+            </div>
+            <div class="vaga-ead">
+                <div class="etiqueta">EAD</div>
+                <h4>Jogos Digitais<br>Tecnólogo</h4>
+                <p>O sistema de ensino DIGITAL utiliza diversas metodologias na modalidade EaD e o aluno tem liberdade
+                    para estudar on-line onde e quando quiser.</p>
+            </div>
+        </div>
+        <div class="instituição1">
+            <h3>instituição</h3>
+            <ul>
+                <li> Uninter</li>
+                <input type="button" onclick="fucao8()" value="Ver se possui vaga" />
+                <li> Uniasselvi</li>
+                <input type="button" onclick="fucao9()" value="Ver se possui vaga" />
+                <li> Unip</li>
+                <input type="button" onclick="fucao10()" value="Ver se possui vaga" />
+                <li> PUCPR</li>
+                <input type="button" onclick="fucao11()" value="Ver se possui vaga" />
+                <li>Unifacisa-Centro Universitário Unifacisa</li>
+                <input type="button" onclick="fucao12()" value="Ver se possui vaga" />
+                <li>PUC-Campinas</li>
+                <input type="button" onclick="fucao13()" value="Ver se possui vaga" />
+                <li>SENAC SP</li>
+                <input type="button" onclick="fucao14()" value="Ver se possui vaga" />
+            </ul>
+        </div>
+    </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+</head>
